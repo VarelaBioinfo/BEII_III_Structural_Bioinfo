@@ -12,23 +12,25 @@ description: "This is a book for the notes and activities of the structural bioi
 
 # Prerequisites
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
 
-The **bookdown** package can be installed from CRAN or Github:
+**Pymol**
 
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
+DOWNLOAD URL: https://pymol.org/ep
+USERNAME: jun2021
+PASSWORD: betabarrel
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+**Phenix**
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
+http://www.phenix-online.org/phenix_request/index.cgi
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+**COOT**
+
+For linux and Windows
+
+https://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/
+
+For MacOS (You need X11)
+
+http://scottlab.ucsc.edu/xtal/wiki/index.php/Stand-Alone_Coot
+
+https://www.xquartz.org/

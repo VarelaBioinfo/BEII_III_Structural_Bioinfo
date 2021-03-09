@@ -192,15 +192,29 @@ Tarea hacer el practice quiz de ramachandran plot
 fenex refine 
 - usa lo que le dimos 
 
+
+## Preguntas a responder
+
 [preguntas a contestar](https://cdn.rcsb.org/pdb101/molecular-machinery/)
 
+1. ¿Cuántas moléculas de miosina se necesitan para sostener una pelota de baseball?
+2 trillones de moléculas de miosina 
 
-Cuántas moléculas de miosina se necesitan para sostener una pelota de baseball.
-Qué residuos forman el cromóforo de GFP
-Cual es uno de los más poderosos inhibidores de la RNA polimerasa.
-Describir la actividad de la DNA helicasa.
-Que es mas grande un ribosoma o un virus?
-Como funciona la lisozima
+2.¿Qué residuos forman el cromóforo de GFP?
+residuos 65-67 (Ser- dehydro Tyr- Gly) serina, dehidro tirosina y glicina cuyo backbone ciclado forma el anillo imidazolidone. (SYG)
+
+3.¿Cual es uno de los más poderosos inhibidores de la RNA polimerasa?
+La alfa-amanitina, un péptido pequeño y circular creado por el hongo *Amanita muscaria* 
+
+4. Describir la actividad de la DNA helicasa.
+Permite el desenrrollamiento y la exposición de las bases para que la polimersa pueda acceder para sintetizar la hebra complementaria de DNA o RNA.
+
+5. ¿Que es mas grande un ribosoma o un virus?
+el tamaño del ribosoma bacteriano es de al rededor de 20nm (200 Armstorngs), el eucariótico entre 25-30 nm (250-300 Armstrongs). Los virus más pequeños como el  de la familia Picoronaviridae es de 20-30 nm, los de tamaño más grande como los Paramixoviridae pueden medir entre 150-300nm entonces la respuesta es el virus. 
+
+6. ¿Como funciona la lisozima?
+Es una enzima que actua en la pared bacteriana al romer las cadenas de carbohidratos destruyendo su integridad estructural. Lo que provoca que su presión osmótica la haga reventar. 
+
 
 r-free score que no esta sesgado pues es solo 
 bonds y angulos es que tan apretada está la proteina 

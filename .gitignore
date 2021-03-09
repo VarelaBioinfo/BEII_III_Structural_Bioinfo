@@ -3,3 +3,6 @@
 .Rdata
 .httr-oauth
 .DS_Store
+
+# Compiled images that R code creates but because Rcode is in Rmd you dont need to commit
+_bookdown_files

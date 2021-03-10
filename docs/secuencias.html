@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 XDS.INP | Structural Bioinformatics</title>
+  <title>Chapter 6 Secuencias | Structural Bioinformatics</title>
   <meta name="description" content="This is a book for the notes and activities of the structural bioinformatics module of the Bioinformatics and Statistics course." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 XDS.INP | Structural Bioinformatics" />
+  <meta property="og:title" content="Chapter 6 Secuencias | Structural Bioinformatics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 XDS.INP | Structural Bioinformatics" />
+  <meta name="twitter:title" content="Chapter 6 Secuencias | Structural Bioinformatics" />
   
   <meta name="twitter:description" content="This is a book for the notes and activities of the structural bioinformatics module of the Bioinformatics and Statistics course." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="cs-of-covalent-bondas.html"/>
-<link rel="next" href="literature.html"/>
+<link rel="prev" href="pymol.html"/>
+<link rel="next" href="applications.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -212,204 +212,220 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="xds.inp" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> XDS.INP</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="xds-inp.html#cb1-1"></a><span class="fu">scp</span> XDS.INP avarela@tepeu.lcg.unam.mx:/export/storage/users/avarela</span>
-<span id="cb1-2"><a href="xds-inp.html#cb1-2"></a></span>
-<span id="cb1-3"><a href="xds-inp.html#cb1-3"></a><span class="co"># Ejecutar la lectura </span></span>
-<span id="cb1-4"><a href="xds-inp.html#cb1-4"></a><span class="ex">xds_par</span> </span></code></pre></div>
-<pre><code>UNIT_CELL_CONSTANTs= 38.9380 377.0
-JOB
-x-ray_wavelength = longitud de onda  al que le disparamos 
-- datos de donde a 
-- detector parametro para que no se sobrecargue 
-- exlclye la resolución tal porque hay un aro de hielo </code></pre>
-<p>Protein cristal fishing
-- pescas el cristal y lo metes en nitrógeno líquido
-- ice ring diffraction pattern se ve como un aro al disparar
-- tienes que excluirla de tu análisis
-- solo trabajas con el cristal si tiene hielo si no tienes de otra
+<div id="secuencias" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Secuencias</h1>
+<div id="the-protein-side-of-the-central-dogma-permanence-and-change-thermoynamic-theory-of-protein-folding" class="section level2">
+<h2><span class="header-section-number">6.1</span> The protein side of the central dogma: Permanence and change thermoynamic theory of protein folding</h2>
+</div>
+<div id="in-vitro-models" class="section level2">
+<h2><span class="header-section-number">6.2</span> In vitro Models</h2>
+<p>Uno tiene una secuencia de proteína que quieres usar, la expresas en e.coli, le pones un inductor para que la produzca y la purificas cuando la densidad óptica llega al punto que deseas. Tienes a los miles y millones de moléculas en tu buffer.</p>
+<p>Protein folding lanscape
+Depende de cuanta energía libre de gibbs pierden se quedan en su estado más bajo de energía.</p>
+<p>Rosseta no puede describir moléculas más complejas como la rhodopsina.</p>
+</div>
+<div id="gibbs-free-energy-explained" class="section level2">
+<h2><span class="header-section-number">6.3</span> Gibbs free Energy Explained</h2>
+<ul>
+<li>Entalpía: Es el calor del sistema, determinado por los enlaces.
+Entropía: desorden del sistema. Estado sin plegar y estado nativo.</li>
+</ul>
+</div>
+<div id="protein-folding-kinetics" class="section level2">
+<h2><span class="header-section-number">6.4</span> Protein Folding Kinetics</h2>
+<ul>
+<li>Energía libre de gibbs negativo lleva a un plegamiento espontaneo.</li>
+<li>Energía libre de gibbs positiva requiere de otros elementos que la ayuden a su plegamiento.</li>
+<li>Las proteínas están en un estado de equilibrio</li>
+<li>Kinetics: tiempo</li>
+<li>Thermodynamics: Lo que sucede cuando está en equilibrio</li>
+<li>Chebron plot: mide la velocidad de plegamiento de una proteína. Proteína purificada sin ningún desnaturalizante(GdmCl y urea provocan que se despliegue) vs una con GdmCl puedes medir cómo se va plegando la proteína. - log kf: Se ve qué tan rapido se pliega la proteína</li>
+<li>log ku: Se ve qué tan rápido se despliega la proteína</li>
+<li>El punto más bajo es el punto de equilibrio</li>
+<li>se pueden realizar permutaciones ciruculares para observar como cambia el núcleo de plegamiento según la secuencia</li>
+<li>si inician en el mismo lado quiere decir que su velocidad de plegamiento es igual pero si se separan al final te dice que cambian las velocidades de despliegue.</li>
+</ul>
+<p><a href="http://book.bionumbers.org/">cell biology by the numbers</a></p>
+</div>
+<div id="free-energy-of-folding-for-taq" class="section level2">
+<h2><span class="header-section-number">6.5</span> Free energy of folding for Taq</h2>
+<p>Mide el contenido de estructura secundaria de las porteínas. La energía libre de plegamiento de la taq, conforme más Guanidinium HCl existe un gran salto de despliegue de la proteína (desplegamiento coperativo).</p>
+</div>
+<div id="thermodynamics" class="section level2">
+<h2><span class="header-section-number">6.6</span> Thermodynamics</h2>
+<p>Dos plegamientos de proteínas distintas que juntaron por que existía una señal evolutiva.
+- shift de una proteína plegada como de 360 de longitud de onda.</p>
+</div>
+<div id="phi-value-analysis" class="section level2">
+<h2><span class="header-section-number">6.7</span> Phi Value analysis</h2>
+<p>Clasificación más grande de proteínas es de membrana y soluble</p>
+</div>
+<div id="ejercicio-real" class="section level2">
+<h2><span class="header-section-number">6.8</span> Ejercicio Real</h2>
+<p><a href="https://www.rcsb.org/structure/4QWV" class="uri">https://www.rcsb.org/structure/4QWV</a></p>
+<pre><code># Versión abierta de la proteína 
+fetch 1usg
+# versión cerrada del receptor 
+fetch 1usk 
+# para hacer un biosensor 
+izq 
+1usk
+</code></pre>
+<p>arreglar la quimera para que se vea</p>
+<p>Alineamiento de la quimera
+query 1usg
+target 4qwv</p>
+<p>### Se alinenan
+Hay un lobulo de la quimera que alinea bien con una pero con el otro no.
+- queremos que se vea como 1usk
+- el binding site ya no existe
 -</p>
-<ul>
-<li>el grupo espacial entre más alto sea tiene mayor simetría</li>
-</ul>
-<p>Se expresan las proteínas, se purifican se cristalizan.</p>
-<ul>
-<li>La celda unitaria
-<ul>
-<li>unidad minima definida en xy y z que se necesita para reconsturir el cristal completo.
-<ul>
-<li>si lo trasladas y lo rotas
-<ul>
-<li>unidad asimétrica es mas chiva que la celda unitaria</li>
-<li>procesos de rotación y traslacion se genera el cristal entero</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>PSI Paul scharrer institut
-<ul>
-<li>Se generan los rayos X, se le disparan a los cristales de proteina acomodados de forma ordenada
-<ul>
-<li>patrones de difracción se ven como puntitos
-<ul>
-<li>se puede extraer el patrón que corresponde a las fases o amplitudes de esas ondas
-<ul>
-<li>se puede determinar la d</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>PX-2</li>
-</ul></li>
-</ul>
-<div id="lyzosime" class="section level2">
-<h2><span class="header-section-number">3.1</span> Lyzosime</h2>
-</div>
-<div id="life-is-the-result-of-the-chemical-activity-of-proteins" class="section level2">
-<h2><span class="header-section-number">3.2</span> Life is the result of the chemical activity of proteins</h2>
-<ul>
-<li>spacefilling Representation
-<ul>
-<li>radio de vanderballs es toda la probilidad de encontrar girando a las moléculas
-<ul>
-<li>macromolecular crowding</li>
-<li>medir cosas con volumen</li>
-<li></li>
-</ul></li>
-</ul></li>
-</ul>
-<p>space group es la constante unitaria
-- reflections on file</p>
-<p><a href="https://www.biologie.uni-konstanz.de/diederichs/">grupo de xds</a></p>
-<div id="determinación-de-las-bases-con-molecular-replacement" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Determinación de las bases con molecular replacement</h3>
-<p>projecto tutorial-LCG</p>
-<p>seuqnce file lyzo.txt</p>
-</div>
-<div id="molecular-replacement" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> Molecular replacement</h3>
-<p>Data analysis</p>
-<ul>
-<li>xtriage
-job:title: data analysys
-<ul>
-<li>xds_ascii.hkl</li>
-</ul></li>
-</ul>
-<p>cuando nosotros le disparamos a un cristal de proteinas el cristal está girando
-entre más alejados estemos del centro es más alta la resolución
-entre más simetría puedes tener más redundancia
-- mejora tu completness
-- mosaicicidad es de mala calidad
-- redes internas en el cristal
-- buena calidad</p>
-<p>le decimos que la</p>
-<p>asmu le explicamos cuantas moleculas de lizosima tenemos por celda unitaria
-- sabemos que hay 1 por cada celda unitaria
-- add search templado
-- le decimos que use la pdb</p>
-</div>
-</div>
-<div id="alpha-trace-c" class="section level2">
-<h2><span class="header-section-number">3.3</span> alpha trace C</h2>
-<ul>
-<li>carbobo alfa nos referimos al backbone de toda la proteína
-<ul>
-<li>son el esqueleto de la proteina
-<a href="https://swissmodel.expasy.org/course">Principles of protein structure, comparative portein modelling and visualization</a></li>
-</ul></li>
-<li>peptide bond es en donde se unen dos resiudos</li>
-<li>beta sheet se ven com flechas</li>
-<li>si queremos seguir el camino de la proteina desde el amino</li>
-<li>carbox terminal inicia en rojo</li>
-<li>amino terminal es el azul</li>
-</ul>
-<div id="primary-structure-peptide-bond" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> Primary structure peptide bond</h3>
-<p>20 aminoacidos naturales
-- glicina el más chico de la cadena lateral
-- alanina
-- valina
-- leucina 3</p>
-<ul>
-<li>aromativos
-<ul>
-<li>fenilalaninda</li>
-</ul></li>
-<li>positivas
-<ul>
-<li>histidina en mcuhas reacciones</li>
-</ul></li>
-<li>polar sin carga
-<ul>
-<li>prolina genera distorciones en las alfa helices</li>
-</ul></li>
-<li>triptofano se usa en fluorescencia</li>
-</ul>
-<p>LA frecuencia de residuos como una función de su número de codones
-- Ramachandran plot</p>
-<p><a href="http://bioinformatics.org/molvis/phipsi/">Ramachandran plot</a></p>
-<p>Radios de vander balls
-clash
-- interacción fisicamente imposible</p>
-<ul>
-<li>angulos phi y pshi
-<ul>
-<li>descripción de los grados de libertad que existene entre dos atomos</li>
-</ul></li>
-</ul>
-<p>solamente existen ciertas combinaciones de angulos phy y psi permitidos por los grados de libertad
-- cuando el phy esta en 0 no hay momento en el que el psi pueda existir sin clash</p>
-<p>Se toma empiricamente y se cuantifican</p>
-<p>Tarea hacer el practice quiz de ramachandran plot</p>
-<p>fenex refine
-- usa lo que le dimos</p>
-</div>
-</div>
-<div id="preguntas-a-responder" class="section level2">
-<h2><span class="header-section-number">3.4</span> Preguntas a responder</h2>
-<p><a href="https://cdn.rcsb.org/pdb101/molecular-machinery/">preguntas a contestar</a></p>
 <ol style="list-style-type: decimal">
-<li>¿Cuántas moléculas de miosina se necesitan para sostener una pelota de baseball?
-2 trillones de moléculas de miosina</li>
+<li>Hacer un alineamiento estructural multiple de los 3 pdbs
+1usg, 1usk, 4qwv</li>
+<li>Sesión de pymol</li>
 </ol>
-<p>2.¿Qué residuos forman el cromóforo de GFP?
-residuos 65-67 (Ser- dehydro Tyr- Gly) serina, dehidro tirosina y glicina cuyo backbone ciclado forma el anillo imidazolidone. (SYG)</p>
-<p>3.¿Cual es uno de los más poderosos inhibidores de la RNA polimerasa?
-La alfa-amanitina, un péptido pequeño y circular creado por el hongo <em>Amanita muscaria</em></p>
-<ol start="4" style="list-style-type: decimal">
-<li><p>Describir la actividad de la DNA helicasa.
-Permite el desenrrollamiento y la exposición de las bases para que la polimersa pueda acceder para sintetizar la hebra complementaria de DNA o RNA.</p></li>
-<li><p>¿Que es mas grande un ribosoma o un virus?
-el tamaño del ribosoma bacteriano es de al rededor de 20nm (200 Armstorngs), el eucariótico entre 25-30 nm (250-300 Armstrongs). Los virus más pequeños como el de la familia Picoronaviridae es de 20-30 nm, los de tamaño más grande como los Paramixoviridae pueden medir entre 150-300nm entonces la respuesta es el virus.</p></li>
-<li><p>¿Como funciona la lisozima?
-Es una enzima que actua en la pared bacteriana al romer las cadenas de carbohidratos destruyendo su integridad estructural. Lo que provoca que su presión osmótica la haga reventar.</p></li>
-</ol>
-<p>r-free score que no esta sesgado pues es solo
-bonds y angulos es que tan apretada está la proteina
-angulos la descripción geométrica de todos los ángulos
-- clashscore
-Ramachandran favored el 95% están cayendo en lasa regiones permitidas de la gráfica
-- Ramachandran outliers:
-- alanina con un rotamero poco común
--
-phenix.refine</p>
-<p>Compare statistics
-- lo que queremos tener es un pentagono simétrico
--
-puente de hidrogeno son 2.5 armstrons
-molecula de hibbs está funcionando como un amortiguador</p>
-<p>Tarea 3</p>
-<p>corregir la lizosima
-- abrirla en coot
-- jugar con los rotameros
-- resolver los clashes
--tutorial-lcg_bad-atoms.pdb</p>
 <ul>
-<li>tiene interacciones</li>
+<li>4qwv( quimera)</li>
 </ul>
-<p>validation en fenyx te dice qué aminoacidos tienen clash
-- clashcore 12 bajarlo como a 5.6
-- guardarlo como pdb y mandarlo</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Subes la quimera a protein tools</li>
+</ol>
+<ul>
+<li>redes de puentes de hidrógeno</li>
+<li>puentes de sal</li>
+<li>contact order
+<ul>
+<li>bajo se pliegan muy rápido</li>
+<li>están muy juntos los resiudos entonces se pliegan rapido</li>
+</ul></li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Subir la 4qwv a hydrogen bonds</li>
+</ol>
+<ul>
+<li>pones el pdb code</li>
+<li>hint: la proteína hace unas interacciones que no existene en la nativa y buscó cómo plegarse entonces puede ser que existan puentes de hidrógeno que no tendrían que existir
+<ul>
+<li>cambiar un aminoacido polar por uno hidrofobico para cambiar la configuración</li>
+<li>objetivo es tener una estructura similar</li>
+<li>hacer mutaciones con pymol o con coot para detectar mutaciones que promuevan el plegamiento para que se parezca más a 1usg o 1usk. Es más probable que quede en conformación abierta porque no hay ligando.</li>
+</ul></li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>haces la mutaciones en coot o pymol</li>
+<li>Generar el modelo mutante</li>
+</ol>
+<pre><code>1. Hacer un alineamiento estructural multiple de estas tres pdbs
+
+1usg
+1usk
+4QWV
+
+2. Sesión de pymol 
+
+4QWV
+
+3. Utilizar las herramientas de 
+
+https://proteintools.uni-bayreuth.de/
+
+Para detectar mutaciones que promuevan el plegamiento de 4QWV para que se parezca mas 
+
+1usg
+
+1usk
+
+4. Hacer las mutaciones en coot o pymol 
+
+5. Generar su modelo mutante
+
+6. mapa de densidad electrónica 
+7. correr el plugin 
+
+# molprobity 
+mobprobity.biochem.duke.edu 
+</code></pre>
+<p>plugin clashes
+<a href="https://pymolwiki.org/index.php/Show_bumps" class="uri">https://pymolwiki.org/index.php/Show_bumps</a></p>
+<p><code>show_bumps</code></p>
+<p>back to query multiple
+1usg
+1usk
+4qwv</p>
+<p>solo la cadena A</p>
+<p>puentes entre la quimera entre el lobulo de abajo y la de arriba</p>
+<p><a href="https://proteintools.uni-bayreuth.de/">reglas de construcción de proteinas</a></p>
+<p><a href="https://www.ebi.ac.uk/msd-srv/ssm/">link pdbefold mitch</a></p>
+</div>
+<div id="genealogy" class="section level2">
+<h2><span class="header-section-number">6.9</span> Genealogy</h2>
+<p>Si dos proteínas</p>
+<p>homologia es convergencia
+analogía es divergencia</p>
+<p>beta barrels son homologos porque surgieron de uno ancestral
+- analogos aunque sean similares no provienen de un ancestro común</p>
+<p><a href="http://ekhidna2.biocenter.helsinki.fi/dali/">dali server for comparing protein structures in 3D</a></p>
+<p><a href="https://www.mpibpc.mpg.de/15747186/cv_soeding">crak matemático que desarrolla herramientas bioinformáticas</a></p>
+<p><a href="https://toolkit.tuebingen.mpg.de">max planck bioinformatic toolkit</a></p>
+<ul>
+<li>paralogy = duplication event</li>
+</ul>
+<p><a href="http://prodata.swmed.edu/malisam/">malisam analogous base de datos de proteinas estructuralmente anólogas</a></p>
+<ul>
+<li>proteinas misma estructura se dice que son convergentes</li>
+<li>secuencias muy parecidas generalmente son muy homologas</li>
+<li>muchas proteinas estan echas por dominios
+<ul>
+<li>autonomous folding units (domain)</li>
+</ul></li>
+</ul>
+<div id="comprehensive-databases" class="section level3">
+<h3><span class="header-section-number">6.9.1</span> comprehensive databases</h3>
+<p>NCBI databases
+Uniprot</p>
+</div>
+<div id="other-databases" class="section level3">
+<h3><span class="header-section-number">6.9.2</span> other databases</h3>
+<p><a href="https://www.cathdb.info">cath database</a>
+1. Utilizo todos los servers posibles para saber todo de mi proteina
+2. Ya luego hago experimentos
+3. puede ver los homologos para buscar estabilidad en</p>
+<p>tim barrel
+compartimentalizada
+fetch 1thf
+la estabilidad está dada por la parte de abajo
+casi todos los barriles tim unen fosfato en la misma posicion
+- permite clusterizar los barriles tim por proteinas</p>
+<p><a href="https://fuzzle.uni-bayreuth.de">fold puzzle database, secuencia y estructura en una misma base</a></p>
+<blockquote>
+<p>gene machine the race to deciper libro</p>
+</blockquote>
+</div>
+</div>
+<div id="chemical-methods-and-thermal-denaturation-estimation-of-thermodynamic-stability-disordered-proteins" class="section level2">
+<h2><span class="header-section-number">6.10</span> Chemical methods and thermal denaturation Estimation of thermodynamic stability Disordered proteins</h2>
+<p>Protein folding in the cell ( in vivo) Introduction</p>
+<p>Uniprot
+uniref
+tenemos cd hit que hace clusters de las porteínas
+sequence based clsassifci</p>
+<p>ecod evolutionary classification of protein domains
+<a href="http://prodata.swmed.edu/ecod/">ecod</a></p>
+<p><a href="https://github.com/soedinglab/hh-suite">Remote protein homology detection suite</a></p>
+<p><a href="pymol.html#uniprot">UniProt</a> <a href="http://www.uniprot.org/" class="uri">http://www.uniprot.org/</a>
+4) CDD: <a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi" class="uri">https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi</a> 5) SMART: <a href="http://smart.embl-heidelberg.de/" class="uri">http://smart.embl-heidelberg.de/</a>
+6) Pfam: <a href="http://pfam.xfam.org/" class="uri">http://pfam.xfam.org/</a></p>
+</div>
+<div id="the-ribosome" class="section level2">
+<h2><span class="header-section-number">6.11</span> The ribosome</h2>
+</div>
+<div id="evolution-of-the-ribosome" class="section level2">
+<h2><span class="header-section-number">6.12</span> Evolution of the ribosome</h2>
+<p>Protein folding in the ribosome, methods and findings.</p>
+</div>
+<div id="interactive-exercises-protein-folding-and-the-ribosome." class="section level2">
+<h2><span class="header-section-number">6.13</span> Interactive exercises protein folding and the ribosome.</h2>
 
 </div>
 </div>
@@ -418,8 +434,8 @@ molecula de hibbs está funcionando como un amortiguador</p>
           </div>
         </div>
       </div>
-<a href="cs-of-covalent-bondas.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="literature.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pymol.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="applications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

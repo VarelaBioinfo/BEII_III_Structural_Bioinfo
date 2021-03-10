@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 XDS.INP | Structural Bioinformatics</title>
+  <title>Chapter 5 Pymol | Structural Bioinformatics</title>
   <meta name="description" content="This is a book for the notes and activities of the structural bioinformatics module of the Bioinformatics and Statistics course." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 XDS.INP | Structural Bioinformatics" />
+  <meta property="og:title" content="Chapter 5 Pymol | Structural Bioinformatics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 XDS.INP | Structural Bioinformatics" />
+  <meta name="twitter:title" content="Chapter 5 Pymol | Structural Bioinformatics" />
   
   <meta name="twitter:description" content="This is a book for the notes and activities of the structural bioinformatics module of the Bioinformatics and Statistics course." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="cs-of-covalent-bondas.html"/>
-<link rel="next" href="literature.html"/>
+<link rel="prev" href="literature.html"/>
+<link rel="next" href="secuencias.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -212,204 +212,235 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="xds.inp" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> XDS.INP</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="xds-inp.html#cb1-1"></a><span class="fu">scp</span> XDS.INP avarela@tepeu.lcg.unam.mx:/export/storage/users/avarela</span>
-<span id="cb1-2"><a href="xds-inp.html#cb1-2"></a></span>
-<span id="cb1-3"><a href="xds-inp.html#cb1-3"></a><span class="co"># Ejecutar la lectura </span></span>
-<span id="cb1-4"><a href="xds-inp.html#cb1-4"></a><span class="ex">xds_par</span> </span></code></pre></div>
-<pre><code>UNIT_CELL_CONSTANTs= 38.9380 377.0
-JOB
-x-ray_wavelength = longitud de onda  al que le disparamos 
-- datos de donde a 
-- detector parametro para que no se sobrecargue 
-- exlclye la resolución tal porque hay un aro de hielo </code></pre>
-<p>Protein cristal fishing
-- pescas el cristal y lo metes en nitrógeno líquido
-- ice ring diffraction pattern se ve como un aro al disparar
-- tienes que excluirla de tu análisis
-- solo trabajas con el cristal si tiene hielo si no tienes de otra
--</p>
+<div id="pymol" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Pymol</h1>
+<div id="uniprot" class="section level2">
+<h2><span class="header-section-number">5.1</span> Uniprot</h2>
+<p>Swiss-prot
+Proteínas caracterizadas bioquímicamente
+Protein Data Bank</p>
+<p>Rfree de la proteína debe estar bien</p>
+<p><strong>R-free</strong>
+Es una medida de la calidad del modelo de la proteína en función de qué tan bien explica los datos experimentales</p>
 <ul>
-<li>el grupo espacial entre más alto sea tiene mayor simetría</li>
+<li>Lo que hacemos con un pdb file
+-estamos generando un modelo que explica las reflecciones de un cristal</li>
+<li>.1 es muy bueno, entre más bajo es mejor
+El 25%</li>
+<li>sí tienes una resolución muy baja eso te permite diferenciar mucho los atomos por lo que esperas un R-free muy bajo</li>
+<li>una resolución de menos de un armstrong te debe dar menos resolución</li>
+<li>R-free en una estructura</li>
 </ul>
-<p>Se expresan las proteínas, se purifican se cristalizan.</p>
-<ul>
-<li>La celda unitaria
-<ul>
-<li>unidad minima definida en xy y z que se necesita para reconsturir el cristal completo.
-<ul>
-<li>si lo trasladas y lo rotas
-<ul>
-<li>unidad asimétrica es mas chiva que la celda unitaria</li>
-<li>procesos de rotación y traslacion se genera el cristal entero</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>PSI Paul scharrer institut
-<ul>
-<li>Se generan los rayos X, se le disparan a los cristales de proteina acomodados de forma ordenada
-<ul>
-<li>patrones de difracción se ven como puntitos
-<ul>
-<li>se puede extraer el patrón que corresponde a las fases o amplitudes de esas ondas
-<ul>
-<li>se puede determinar la d</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>PX-2</li>
-</ul></li>
-</ul>
-<div id="lyzosime" class="section level2">
-<h2><span class="header-section-number">3.1</span> Lyzosime</h2>
 </div>
-<div id="life-is-the-result-of-the-chemical-activity-of-proteins" class="section level2">
-<h2><span class="header-section-number">3.2</span> Life is the result of the chemical activity of proteins</h2>
+<div id="subir-tu-proteína-a-pdb" class="section level2">
+<h2><span class="header-section-number">5.2</span> subir tu proteína a PDB</h2>
 <ul>
-<li>spacefilling Representation
-<ul>
-<li>radio de vanderballs es toda la probilidad de encontrar girando a las moléculas
-<ul>
-<li>macromolecular crowding</li>
-<li>medir cosas con volumen</li>
-<li></li>
-</ul></li>
-</ul></li>
+<li>subir el file con las reflections</li>
+<li>datos del cristal</li>
+<li>contenido del solvente</li>
 </ul>
-<p>space group es la constante unitaria
-- reflections on file</p>
-<p><a href="https://www.biologie.uni-konstanz.de/diederichs/">grupo de xds</a></p>
-<div id="determinación-de-las-bases-con-molecular-replacement" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Determinación de las bases con molecular replacement</h3>
-<p>projecto tutorial-LCG</p>
-<p>seuqnce file lyzo.txt</p>
 </div>
-<div id="molecular-replacement" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> Molecular replacement</h3>
-<p>Data analysis</p>
+<div id="estructuras" class="section level2">
+<h2><span class="header-section-number">5.3</span> Estructuras</h2>
+<p><a href="http://pfam.xfam.org">dominios en pfam</a>
+<strong>Dominio</strong>
+una cadena
+<strong>Cuaternario</strong>
+Hablamos de más de una cadena
+** Estructura super secundaria<strong>
+</strong>Plegamiento de proteínas**
+-
+- 1000 y 2000
+- beta trefoil
+- jelly-roll
+- immunoglobulin fold
+- TIM barrel
+- ferrodoxin fold
+- updown bundle
+- muchas distintas secuencias pueden darte el mismo plegamiento</p>
+<p>Genomas predecimos proteinas, se guardan en uniprot, se resuelven las estructuras y se hace PDB, luego deep<br />
+Subset del PDB en donde se clasifican las proteínas por origen evolutivo común
+deep mind y alfa fold en google.</p>
+<p><a href="http://scop.mrc-lmb.cam.ac.uk/">scop</a></p>
 <ul>
-<li>xtriage
-job:title: data analysys
-<ul>
-<li>xds_ascii.hkl</li>
-</ul></li>
+<li>dos proteínas pertencen al mismo plegamiento si contienen dos estructuras en la misma conformación</li>
 </ul>
-<p>cuando nosotros le disparamos a un cristal de proteinas el cristal está girando
-entre más alejados estemos del centro es más alta la resolución
-entre más simetría puedes tener más redundancia
-- mejora tu completness
-- mosaicicidad es de mala calidad
-- redes internas en el cristal
-- buena calidad</p>
-<p>le decimos que la</p>
-<p>asmu le explicamos cuantas moleculas de lizosima tenemos por celda unitaria
-- sabemos que hay 1 por cada celda unitaria
-- add search templado
-- le decimos que use la pdb</p>
 </div>
+<div id="pymol-by-schrodinger" class="section level2">
+<h2><span class="header-section-number">5.4</span> Pymol by Schrodinger</h2>
+<p><a href="https://swift.cmbi.umcn.nl/gv/dssp/">dssp descripción geométrica de los atomos</a></p>
+<p><a href="https://pymolwiki.org/index.php/Main_Page">pymol wiki</a></p>
+<p><a href="http://molprobity.biochem.duke.edu">mol probity</a>
+Pudes desarrollar un metodo para ver clash con pymol y puntos</p>
+<p>Dssp indica las coordenadas para la helix, beta, etc.
+muchos pdbs tienen secondary structure definition by the program DSSP</p>
+<ul>
+<li>Model</li>
+<li>roving density</li>
+<li>ray tracing
+<ul>
+<li>rendering image</li>
+<li>subir una imagen a artículo</li>
+<li><code>ray</code>en la linea de comando superior</li>
+</ul></li>
+</ul>
+<div id="pdb-structrue-file" class="section level3">
+<h3><span class="header-section-number">5.4.1</span> PDB structrue file</h3>
+<p>-header
+- datos del deposito
+- si fue artificial
+- enzyme clasification 3.1.1.7 en KEGG
+- te da la info de lo que es la proteína
+- metodo de resolución
+- organimso
+- autores
+- versiones
+- datos utilizados por el refinment
+- Valores de ramachandran
+- si la estructura fue revisada
+- secuencia en el código de tres letras</p>
+<p><strong>¿Qué hago si no encuentro mi proteína en pdb?</strong>
+si no encuentro mi proteína en pdb puedeo en swissmodel.expasy.org puedo generar modelos de homología en subiendo mi secuencia comparandola con secuencias que tienen estructura y en función de eso generar un modelo de homología. Si no entonces puedo ir al software robetta de david baker que permite predecir estructuras ab initio utilizando estructura química y no evolución. Utiliza unas librerías de fragmentos. Deep minda con su algoritmo alpha-fold hace algo parecido.</p>
+<p>coot lo usamos cuando queremos trabajar en un modelo no terminado, es más una herramienta cristalográfica mientras que pymol es más de visualización.</p>
+<p>heath es del solvente</p>
 </div>
-<div id="alpha-trace-c" class="section level2">
-<h2><span class="header-section-number">3.3</span> alpha trace C</h2>
-<ul>
-<li>carbobo alfa nos referimos al backbone de toda la proteína
-<ul>
-<li>son el esqueleto de la proteina
-<a href="https://swissmodel.expasy.org/course">Principles of protein structure, comparative portein modelling and visualization</a></li>
-</ul></li>
-<li>peptide bond es en donde se unen dos resiudos</li>
-<li>beta sheet se ven com flechas</li>
-<li>si queremos seguir el camino de la proteina desde el amino</li>
-<li>carbox terminal inicia en rojo</li>
-<li>amino terminal es el azul</li>
-</ul>
-<div id="primary-structure-peptide-bond" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> Primary structure peptide bond</h3>
-<p>20 aminoacidos naturales
-- glicina el más chico de la cadena lateral
-- alanina
-- valina
-- leucina 3</p>
-<ul>
-<li>aromativos
-<ul>
-<li>fenilalaninda</li>
-</ul></li>
-<li>positivas
-<ul>
-<li>histidina en mcuhas reacciones</li>
-</ul></li>
-<li>polar sin carga
-<ul>
-<li>prolina genera distorciones en las alfa helices</li>
-</ul></li>
-<li>triptofano se usa en fluorescencia</li>
-</ul>
-<p>LA frecuencia de residuos como una función de su número de codones
-- Ramachandran plot</p>
-<p><a href="http://bioinformatics.org/molvis/phipsi/">Ramachandran plot</a></p>
-<p>Radios de vander balls
-clash
-- interacción fisicamente imposible</p>
-<ul>
-<li>angulos phi y pshi
-<ul>
-<li>descripción de los grados de libertad que existene entre dos atomos</li>
-</ul></li>
-</ul>
-<p>solamente existen ciertas combinaciones de angulos phy y psi permitidos por los grados de libertad
-- cuando el phy esta en 0 no hay momento en el que el psi pueda existir sin clash</p>
-<p>Se toma empiricamente y se cuantifican</p>
-<p>Tarea hacer el practice quiz de ramachandran plot</p>
-<p>fenex refine
-- usa lo que le dimos</p>
+<div id="interactive-command-line" class="section level3">
+<h3><span class="header-section-number">5.4.2</span> Interactive command line</h3>
+<pre><code># cargar la molécula
+fetch 1acj
+# file--export--save molecule--save as .pdb
+# borra todo 
+delete all
+
+# hide cartoon 
+# show lines 
+# color by element 
+# A action preset--ligandsites--cartoon 
+
+
+
+# las cruzes son aguas
+
+# regresar a la conformacion original
+reset
+
+bbplane 
+run /path/bbplane.py
+
+bfactor putty</code></pre>
 </div>
 </div>
-<div id="preguntas-a-responder" class="section level2">
-<h2><span class="header-section-number">3.4</span> Preguntas a responder</h2>
-<p><a href="https://cdn.rcsb.org/pdb101/molecular-machinery/">preguntas a contestar</a></p>
+<div id="sars-cov-2" class="section level2">
+<h2><span class="header-section-number">5.5</span> SARS-Cov-2</h2>
+<div id="s-protein-spike" class="section level3">
+<h3><span class="header-section-number">5.5.1</span> S protein (Spike)</h3>
+<p>Solved by cryogenic electon microscopy</p>
+<ul>
+<li>cilindrical shape</li>
+<li>heavyly glycosylated</li>
+<li>beta sheets where it fuses to the cell</li>
+<li>3 identical subunidades</li>
+<li>receptor binding domain RBD
+<ul>
+<li>where it binds to the host cell</li>
+<li>2 are in a down conformation</li>
+<li>1 is filliped up</li>
+</ul></li>
+<li>proteases can cut</li>
+<li>ACE2 where it fuses</li>
+<li>RBD and ACE2
+<ul>
+<li>2 tyrosine residues</li>
+<li>asn</li>
+<li>glu and lys 31
+<ul>
+<li>amid of a glutamin side chain</li>
+<li>hydrogen bonding
+<ul>
+<li>polar and charge residues
+<ul>
+<li>glu37 - arg 393 +</li>
+</ul></li>
+</ul></li>
+<li>RBD</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="paper" class="section level3">
+<h3><span class="header-section-number">5.5.2</span> Paper</h3>
+<ul>
+<li>Existen variantes</li>
+<li>Utilizaron el</li>
+</ul>
+<p>Actividad hacer la figura 2 del paper Structural details at the interface between the SARS-CoV-2 RBM and ACE2</p>
 <ol style="list-style-type: decimal">
-<li>¿Cuántas moléculas de miosina se necesitan para sostener una pelota de baseball?
-2 trillones de moléculas de miosina</li>
+<li>Buscar los PDBs de las figuras</li>
 </ol>
-<p>2.¿Qué residuos forman el cromóforo de GFP?
-residuos 65-67 (Ser- dehydro Tyr- Gly) serina, dehidro tirosina y glicina cuyo backbone ciclado forma el anillo imidazolidone. (SYG)</p>
-<p>3.¿Cual es uno de los más poderosos inhibidores de la RNA polimerasa?
-La alfa-amanitina, un péptido pequeño y circular creado por el hongo <em>Amanita muscaria</em></p>
-<ol start="4" style="list-style-type: decimal">
-<li><p>Describir la actividad de la DNA helicasa.
-Permite el desenrrollamiento y la exposición de las bases para que la polimersa pueda acceder para sintetizar la hebra complementaria de DNA o RNA.</p></li>
-<li><p>¿Que es mas grande un ribosoma o un virus?
-el tamaño del ribosoma bacteriano es de al rededor de 20nm (200 Armstorngs), el eucariótico entre 25-30 nm (250-300 Armstrongs). Los virus más pequeños como el de la familia Picoronaviridae es de 20-30 nm, los de tamaño más grande como los Paramixoviridae pueden medir entre 150-300nm entonces la respuesta es el virus.</p></li>
-<li><p>¿Como funciona la lisozima?
-Es una enzima que actua en la pared bacteriana al romer las cadenas de carbohidratos destruyendo su integridad estructural. Lo que provoca que su presión osmótica la haga reventar.</p></li>
-</ol>
-<p>r-free score que no esta sesgado pues es solo
-bonds y angulos es que tan apretada está la proteina
-angulos la descripción geométrica de todos los ángulos
-- clashscore
-Ramachandran favored el 95% están cayendo en lasa regiones permitidas de la gráfica
-- Ramachandran outliers:
-- alanina con un rotamero poco común
--
-phenix.refine</p>
-<p>Compare statistics
-- lo que queremos tener es un pentagono simétrico
--
-puente de hidrogeno son 2.5 armstrons
-molecula de hibbs está funcionando como un amortiguador</p>
-<p>Tarea 3</p>
-<p>corregir la lizosima
-- abrirla en coot
-- jugar con los rotameros
-- resolver los clashes
--tutorial-lcg_bad-atoms.pdb</p>
-<ul>
-<li>tiene interacciones</li>
-</ul>
-<p>validation en fenyx te dice qué aminoacidos tienen clash
-- clashcore 12 bajarlo como a 5.6
-- guardarlo como pdb y mandarlo</p>
+<pre><code># primera estructura SARS coronavirus spike receptor-binding domain complexed with its recpetor
+fetch 2ajf
+# Segunda estructura
+fetch 6vw1
+set_name 2ajf, 2ajf-sars-cov
+set_name 6vw1-targetm 6w1-target-sars-cov-2
+
+# display---sequence 
+# display--sequence mode --chain identifiers
+# C orange el 2ajf-sars-cov
+# C by element
+
+# Cadena A es el receptor 
+#
+set_name sele,human-receptor-ACE2-sars-cov
+# En la etiqueta selection A action remove atoms 
+solo quedarnos con A E C
+des SARS-CoV y SARS-CoV-2
+
+helical bundle es el receptor humano 
+el que tiene más betas es la proteina viral 
+
+AC menos la A de otro color color by 
+# Action en un sars y align molecues
+
+# selecting residues 
+seleccionar el loop del humano y sars1
+
+set_
+interface L residues
+
+# Solo me quedo con las cadenas Es de cov2
+2e e 
+
+target es sars-cov1
+
+query es sars-cov-2 
+
+https://www.ebi.ac.uk/msd-srv/ssm/
+
+entre q se acerca más a 1 es mejor 
+RMSD 
+
+### Seleccion hecha
+- click secuendario en la seleccion actions, find polar contacts, to any atoms, 
+  - actions, find , any contacts between chaisn between 4 armstrongs 
+  - 
+
+install protego 
+
+</code></pre>
+</div>
+</div>
+<div id="figure-scripting-by-example-interactive-automation-with-hotkeys-pymolrc-startup-script" class="section level2">
+<h2><span class="header-section-number">5.6</span> Figure scripting by example Interactive Automation with hotkeys pymolrc startup script</h2>
+</div>
+<div id="access-and-modify-atom-data-with-iterate-and-alter-write-pymol-extensions" class="section level2">
+<h2><span class="header-section-number">5.7</span> Access and modify atom data with iterate and alter write PyMOL extensions</h2>
+</div>
+<div id="anaconda-cloud-with-pymol-2.0" class="section level2">
+<h2><span class="header-section-number">5.8</span> Anaconda Cloud with PyMOL 2.0</h2>
+</div>
+<div id="exercises" class="section level2">
+<h2><span class="header-section-number">5.9</span> Exercises</h2>
 
 </div>
 </div>
@@ -418,8 +449,8 @@ molecula de hibbs está funcionando como un amortiguador</p>
           </div>
         </div>
       </div>
-<a href="cs-of-covalent-bondas.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="literature.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="literature.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="secuencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

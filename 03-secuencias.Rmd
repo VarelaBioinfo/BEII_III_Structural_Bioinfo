@@ -1,0 +1,221 @@
+# Methods
+
+## The protein side of the central dogma: Permanence and change thermoynamic theory of protein folding 
+
+## In vitro Models
+Uno tiene una secuencia de proteína que quieres usar, la expresas en e.coli, le pones un inductor para que la produzca y la purificas cuando la densidad óptica llega al punto que deseas. Tienes a los miles y millones de moléculas en tu buffer. 
+
+Protein folding lanscape 
+Depende de cuanta energía libre de gibbs pierden se quedan en su estado más bajo de energía. 
+
+Rosseta no puede describir moléculas más complejas como la rhodopsina. 
+
+## Gibbs free Energy Explained 
+
+- Entalpía: Es el calor del sistema, determinado por los enlaces. 
+Entropía: desorden del sistema. Estado sin plegar y estado nativo. 
+
+## Protein Folding Kinetics
+
+- Energía libre de gibbs negativo lleva a un plegamiento espontaneo. 
+- Energía libre de gibbs positiva requiere de otros elementos que la ayuden a su plegamiento. 
+- Las proteínas están en un estado de equilibrio 
+- Kinetics: tiempo 
+- Thermodynamics: Lo que sucede cuando está en equilibrio 
+- Chebron plot: mide la velocidad de plegamiento de una proteína. Proteína purificada sin ningún desnaturalizante(GdmCl y urea provocan que se despliegue) vs una con GdmCl puedes medir cómo se va plegando la proteína. - log kf: Se ve qué tan rapido se pliega la proteína 
+- log ku: Se ve qué tan rápido se despliega la proteína 
+- El punto más bajo es el punto de equilibrio 
+- se pueden realizar permutaciones ciruculares para observar como cambia el núcleo de plegamiento según la secuencia 
+- si inician en el mismo lado quiere decir que su velocidad de plegamiento es igual pero si se separan al final te dice que cambian las velocidades de despliegue. 
+
+
+[cell biology by the numbers](http://book.bionumbers.org/)
+
+## Free energy of folding for Taq
+
+Mide el contenido de estructura secundaria de las porteínas. La energía libre de plegamiento de la taq, conforme más Guanidinium HCl existe un gran salto de despliegue de la proteína (desplegamiento coperativo).
+
+## Thermodynamics
+
+Dos plegamientos de proteínas distintas que juntaron por que existía una señal evolutiva. 
+- shift de una proteína plegada como de 360 de longitud de onda. 
+
+## Phi Value analysis
+
+
+Clasificación más grande de proteínas es de membrana y soluble 
+
+## Ejercicio Real 
+
+https://www.rcsb.org/structure/4QWV
+
+```
+# Versión abierta de la proteína 
+fetch 1usg
+# versión cerrada del receptor 
+fetch 1usk 
+# para hacer un biosensor 
+izq 
+1usk
+
+```
+
+
+
+arreglar la quimera para que se vea
+
+Alineamiento de la quimera 
+query 1usg 
+target 4qwv
+
+### Se alinenan 
+Hay un lobulo de la quimera que alinea bien con una pero con el otro no. 
+- queremos que se vea como 1usk 
+- el binding site ya no existe 
+- 
+
+1. Hacer un alineamiento estructural multiple de los 3 pdbs 
+1usg, 1usk, 4qwv
+2. Sesión de pymol 
+- 4qwv( quimera)
+3. Subes la quimera a protein tools 
+- redes de puentes de hidrógeno 
+- puentes de sal 
+- contact order 
+  - bajo se pliegan muy rápido 
+  - están muy juntos los resiudos entonces se pliegan rapido
+4. Subir la 4qwv a hydrogen bonds 
+- pones el pdb code 
+- hint: la proteína hace unas interacciones que no existene en la nativa y buscó cómo plegarse entonces puede ser que existan puentes de hidrógeno que no tendrían que existir
+  - cambiar un aminoacido polar por uno hidrofobico para cambiar la configuración 
+  - objetivo es tener una estructura similar 
+  - hacer mutaciones con pymol o con coot para detectar mutaciones que promuevan el plegamiento para que se parezca más a 1usg o 1usk. Es más probable que quede en conformación abierta porque no hay ligando.
+5. haces la mutaciones en coot o pymol 
+6. Generar el modelo mutante 
+
+```
+1. Hacer un alineamiento estructural multiple de estas tres pdbs
+
+1usg
+1usk
+4QWV
+
+2. Sesión de pymol 
+
+4QWV
+
+3. Utilizar las herramientas de 
+
+https://proteintools.uni-bayreuth.de/
+
+Para detectar mutaciones que promuevan el plegamiento de 4QWV para que se parezca mas 
+
+1usg
+
+1usk
+
+4. Hacer las mutaciones en coot o pymol 
+
+5. Generar su modelo mutante
+
+6. mapa de densidad electrónica 
+7. correr el plugin 
+
+# molprobity 
+mobprobity.biochem.duke.edu 
+
+```
+plugin clashes
+https://pymolwiki.org/index.php/Show_bumps
+
+```show_bumps```
+
+back to query multiple 
+1usg
+1usk 
+4qwv
+
+solo la cadena A
+
+puentes entre la quimera entre el lobulo de abajo y la de arriba
+
+[reglas de construcción de proteinas](https://proteintools.uni-bayreuth.de/)
+
+[link pdbefold mitch](https://www.ebi.ac.uk/msd-srv/ssm/)
+
+## Genealogy 
+
+Si dos proteínas 
+
+homologia es convergencia 
+analogía es divergencia
+
+beta barrels son homologos porque surgieron de uno ancestral 
+- analogos aunque sean similares no provienen de un ancestro común 
+
+[dali server for comparing protein structures in 3D](http://ekhidna2.biocenter.helsinki.fi/dali/)
+
+
+
+[crak matemático que desarrolla herramientas bioinformáticas](https://www.mpibpc.mpg.de/15747186/cv_soeding)
+
+[max planck bioinformatic toolkit](https://toolkit.tuebingen.mpg.de)
+
+- paralogy = duplication event 
+
+[malisam analogous base de datos de proteinas estructuralmente anólogas](http://prodata.swmed.edu/malisam/)
+
+- proteinas misma estructura se dice que son convergentes 
+- secuencias muy parecidas generalmente son muy homologas
+- muchas proteinas estan echas por dominios 
+  - autonomous folding units (domain)
+  
+### comprehensive databases
+NCBI databases 
+Uniprot
+
+### other databases  
+
+[cath database](https://www.cathdb.info)
+1. Utilizo todos los servers posibles para saber todo de mi proteina
+2. Ya luego hago experimentos 
+3. puede ver los homologos para buscar estabilidad en 
+
+tim barrel 
+compartimentalizada 
+fetch 1thf
+la estabilidad está dada por la parte de abajo 
+casi todos los barriles tim unen fosfato en la misma posicion 
+  - permite clusterizar los barriles tim por proteinas
+
+
+[fold puzzle database, secuencia y estructura en una misma base](https://fuzzle.uni-bayreuth.de)
+
+
+>gene machine the race to deciper libro 
+
+## Chemical methods and thermal denaturation Estimation of thermodynamic stability Disordered proteins
+Protein folding in the cell ( in vivo) Introduction
+
+Uniprot 
+uniref
+tenemos cd hit que hace clusters de las porteínas 
+sequence based clsassifci
+
+ecod evolutionary classification of protein domains 
+[ecod](http://prodata.swmed.edu/ecod/)
+
+[Remote protein homology detection suite ](https://github.com/soedinglab/hh-suite)
+
+[UniProt] http://www.uniprot.org/
+4) CDD: https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi 5) SMART: http://smart.embl-heidelberg.de/
+6) Pfam: http://pfam.xfam.org/
+
+
+
+## The ribosome
+
+## Evolution of the ribosome
+Protein folding in the ribosome, methods and findings. 
+
+## Interactive exercises protein folding and the ribosome. 

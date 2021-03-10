@@ -1,0 +1,216 @@
+# Pymol
+
+## Uniprot
+Swiss-prot 
+Proteínas caracterizadas bioquímicamente 
+Protein Data Bank
+
+Rfree de la proteína debe estar bien
+
+**R-free**
+Es una medida de la calidad del modelo de la proteína en función de qué tan bien explica los datos experimentales 
+
+- Lo que hacemos con un pdb file
+-estamos generando un modelo que explica las reflecciones de un cristal 
+- .1 es muy bueno, entre más bajo es mejor
+El 25%
+- sí tienes una resolución muy baja eso te permite diferenciar mucho los atomos por lo que esperas un R-free muy bajo 
+- una resolución de menos de un armstrong te debe dar menos resolución 
+- R-free en una estructura 
+
+## subir tu proteína a PDB 
+
+- subir el file con las reflections 
+- datos del cristal 
+- contenido del solvente 
+
+## Estructuras 
+[dominios en pfam](http://pfam.xfam.org)
+**Dominio**
+ una cadena 
+**Cuaternario**
+Hablamos de más de una cadena
+** Estructura super secundaria**
+**Plegamiento de proteínas**
+- 
+- 1000 y 2000 
+- beta trefoil
+- jelly-roll
+- immunoglobulin fold 
+- TIM barrel
+- ferrodoxin fold
+- updown bundle 
+- muchas distintas secuencias pueden darte el mismo plegamiento 
+
+Genomas predecimos proteinas, se guardan en uniprot, se resuelven las estructuras y se hace PDB, luego deep  
+Subset del PDB en donde se clasifican las proteínas por origen evolutivo común 
+deep mind y alfa fold en google.
+
+[scop](http://scop.mrc-lmb.cam.ac.uk/)
+
+- dos proteínas pertencen al mismo plegamiento si contienen dos estructuras en la misma conformación 
+
+## Pymol by Schrodinger
+
+[dssp descripción geométrica de los atomos](https://swift.cmbi.umcn.nl/gv/dssp/)
+
+[pymol wiki](https://pymolwiki.org/index.php/Main_Page)
+
+[mol probity](http://molprobity.biochem.duke.edu)
+Pudes desarrollar un metodo para ver clash con pymol y puntos 
+
+Dssp indica las coordenadas para la helix, beta, etc.
+muchos pdbs tienen secondary structure definition by the program DSSP
+
+- Model
+- roving density 
+- ray tracing 
+  - rendering image 
+  - subir una imagen a artículo 
+  - `ray`en la linea de comando superior
+  
+### PDB structrue file 
+
+-header
+  - datos del deposito 
+  - si fue artificial
+  - enzyme clasification 3.1.1.7 en KEGG
+    - te da la info de lo que es la proteína
+  - metodo de resolución 
+  - organimso 
+  - autores
+  - versiones
+  - datos utilizados por el refinment
+- Valores de ramachandran 
+- si la estructura fue revisada
+- secuencia en el código de tres letras 
+
+**¿Qué hago si no encuentro mi proteína en pdb?**
+si no encuentro mi proteína en pdb puedeo en swissmodel.expasy.org puedo generar modelos de homología en subiendo mi secuencia comparandola con secuencias que tienen estructura y en función de eso generar un modelo de homología. Si no entonces puedo ir al software robetta de david baker que permite predecir estructuras ab initio utilizando estructura química y no evolución. Utiliza unas librerías de fragmentos. Deep minda con su algoritmo alpha-fold hace algo parecido. 
+
+
+
+coot lo usamos cuando queremos trabajar en un modelo no terminado, es más una herramienta cristalográfica mientras que pymol es más de visualización. 
+  
+  
+heath es del solvente 
+
+  
+### Interactive command line
+```
+# cargar la molécula
+fetch 1acj
+# file--export--save molecule--save as .pdb
+# borra todo 
+delete all
+
+# hide cartoon 
+# show lines 
+# color by element 
+# A action preset--ligandsites--cartoon 
+
+
+
+# las cruzes son aguas
+
+# regresar a la conformacion original
+reset
+
+bbplane 
+run /path/bbplane.py
+
+bfactor putty
+```
+## SARS-Cov-2
+
+### S protein (Spike)
+Solved by cryogenic electon microscopy
+
+- cilindrical shape
+- heavyly glycosylated
+- beta sheets where it fuses to the cell 
+- 3 identical subunidades
+- receptor binding domain RBD
+  - where it binds to the host cell 
+  - 2 are in a down conformation 
+  - 1 is filliped up 
+- proteases can cut 
+- ACE2 where it fuses
+- RBD and ACE2
+  - 2 tyrosine residues 
+  - asn 
+  - glu and lys 31
+    - amid of a glutamin side chain 
+    - hydrogen bonding 
+      - polar and charge residues
+        - glu37 - arg 393 +
+    - RBD 
+    
+### Paper 
+- Existen variantes 
+- Utilizaron el 
+
+Actividad hacer la figura 2 del paper Structural details at the interface between the SARS-CoV-2 RBM and ACE2
+
+
+1. Buscar los PDBs de las figuras 
+```
+# primera estructura SARS coronavirus spike receptor-binding domain complexed with its recpetor
+fetch 2ajf
+# Segunda estructura
+fetch 6vw1
+set_name 2ajf, 2ajf-sars-cov
+set_name 6vw1-targetm 6w1-target-sars-cov-2
+
+# display---sequence 
+# display--sequence mode --chain identifiers
+# C orange el 2ajf-sars-cov
+# C by element
+
+# Cadena A es el receptor 
+#
+set_name sele,human-receptor-ACE2-sars-cov
+# En la etiqueta selection A action remove atoms 
+solo quedarnos con A E C
+des SARS-CoV y SARS-CoV-2
+
+helical bundle es el receptor humano 
+el que tiene más betas es la proteina viral 
+
+AC menos la A de otro color color by 
+# Action en un sars y align molecues
+
+# selecting residues 
+seleccionar el loop del humano y sars1
+
+set_
+interface L residues
+
+# Solo me quedo con las cadenas Es de cov2
+2e e 
+
+target es sars-cov1
+
+query es sars-cov-2 
+
+https://www.ebi.ac.uk/msd-srv/ssm/
+
+entre q se acerca más a 1 es mejor 
+RMSD 
+
+### Seleccion hecha
+- click secuendario en la seleccion actions, find polar contacts, to any atoms, 
+  - actions, find , any contacts between chaisn between 4 armstrongs 
+  - 
+
+install protego 
+
+
+```
+## Figure scripting by example Interactive Automation with hotkeys pymolrc startup script
+
+## Access and modify atom data with iterate and alter write PyMOL extensions
+
+## Anaconda Cloud with PyMOL 2.0
+
+## Exercises 

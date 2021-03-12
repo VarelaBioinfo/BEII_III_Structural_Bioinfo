@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Secuencias | Structural Bioinformatics</title>
+  <title>Chapter 9 Protein design | Structural Bioinformatics</title>
   <meta name="description" content="This is a book for the notes and activities of the structural bioinformatics module of the Bioinformatics and Statistics course." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Secuencias | Structural Bioinformatics" />
+  <meta property="og:title" content="Chapter 9 Protein design | Structural Bioinformatics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Secuencias | Structural Bioinformatics" />
+  <meta name="twitter:title" content="Chapter 9 Protein design | Structural Bioinformatics" />
   
   <meta name="twitter:description" content="This is a book for the notes and activities of the structural bioinformatics module of the Bioinformatics and Statistics course." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="pymol.html"/>
-<link rel="next" href="gunnar-von-heijne-semminar.html"/>
+<link rel="prev" href="cotranslational-protein-folding-the-when-and-why-of-che.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -250,221 +250,148 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="secuencias" class="section level1">
-<h1><span class="header-section-number">Chapter 6</span> Secuencias</h1>
-<div id="the-protein-side-of-the-central-dogma-permanence-and-change-thermoynamic-theory-of-protein-folding" class="section level2">
-<h2><span class="header-section-number">6.1</span> The protein side of the central dogma: Permanence and change thermoynamic theory of protein folding</h2>
-</div>
-<div id="in-vitro-models" class="section level2">
-<h2><span class="header-section-number">6.2</span> In vitro Models</h2>
-<p>Uno tiene una secuencia de proteína que quieres usar, la expresas en e.coli, le pones un inductor para que la produzca y la purificas cuando la densidad óptica llega al punto que deseas. Tienes a los miles y millones de moléculas en tu buffer.</p>
-<p>Protein folding lanscape
-Depende de cuanta energía libre de gibbs pierden se quedan en su estado más bajo de energía.</p>
-<p>Rosseta no puede describir moléculas más complejas como la rhodopsina.</p>
-</div>
-<div id="gibbs-free-energy-explained" class="section level2">
-<h2><span class="header-section-number">6.3</span> Gibbs free Energy Explained</h2>
-<ul>
-<li>Entalpía: Es el calor del sistema, determinado por los enlaces.
-Entropía: desorden del sistema. Estado sin plegar y estado nativo.</li>
-</ul>
-</div>
-<div id="protein-folding-kinetics" class="section level2">
-<h2><span class="header-section-number">6.4</span> Protein Folding Kinetics</h2>
-<ul>
-<li>Energía libre de gibbs negativo lleva a un plegamiento espontaneo.</li>
-<li>Energía libre de gibbs positiva requiere de otros elementos que la ayuden a su plegamiento.</li>
-<li>Las proteínas están en un estado de equilibrio</li>
-<li>Kinetics: tiempo</li>
-<li>Thermodynamics: Lo que sucede cuando está en equilibrio</li>
-<li>Chebron plot: mide la velocidad de plegamiento de una proteína. Proteína purificada sin ningún desnaturalizante(GdmCl y urea provocan que se despliegue) vs una con GdmCl puedes medir cómo se va plegando la proteína. - log kf: Se ve qué tan rapido se pliega la proteína</li>
-<li>log ku: Se ve qué tan rápido se despliega la proteína</li>
-<li>El punto más bajo es el punto de equilibrio</li>
-<li>se pueden realizar permutaciones ciruculares para observar como cambia el núcleo de plegamiento según la secuencia</li>
-<li>si inician en el mismo lado quiere decir que su velocidad de plegamiento es igual pero si se separan al final te dice que cambian las velocidades de despliegue.</li>
-</ul>
-<p><a href="http://book.bionumbers.org/">cell biology by the numbers</a></p>
-</div>
-<div id="free-energy-of-folding-for-taq" class="section level2">
-<h2><span class="header-section-number">6.5</span> Free energy of folding for Taq</h2>
-<p>Mide el contenido de estructura secundaria de las porteínas. La energía libre de plegamiento de la taq, conforme más Guanidinium HCl existe un gran salto de despliegue de la proteína (desplegamiento coperativo).</p>
-</div>
-<div id="thermodynamics" class="section level2">
-<h2><span class="header-section-number">6.6</span> Thermodynamics</h2>
-<p>Dos plegamientos de proteínas distintas que juntaron por que existía una señal evolutiva.
-- shift de una proteína plegada como de 360 de longitud de onda.</p>
-</div>
-<div id="phi-value-analysis" class="section level2">
-<h2><span class="header-section-number">6.7</span> Phi Value analysis</h2>
-<p>Clasificación más grande de proteínas es de membrana y soluble</p>
-</div>
-<div id="ejercicio-real" class="section level2">
-<h2><span class="header-section-number">6.8</span> Ejercicio Real</h2>
-<p><a href="https://www.rcsb.org/structure/4QWV" class="uri">https://www.rcsb.org/structure/4QWV</a></p>
-<pre><code># Versión abierta de la proteína 
-fetch 1usg
-# versión cerrada del receptor 
-fetch 1usk 
-# para hacer un biosensor 
-izq 
-1usk
-</code></pre>
-<p>arreglar la quimera para que se vea</p>
-<p>Alineamiento de la quimera
-query 1usg
-target 4qwv</p>
-<p>### Se alinenan
-Hay un lobulo de la quimera que alinea bien con una pero con el otro no.
-- queremos que se vea como 1usk
-- el binding site ya no existe
--</p>
+<div id="protein-design" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Protein design</h1>
+<div id="power-of-evolution" class="section level2">
+<h2><span class="header-section-number">9.1</span> Power of evolution</h2>
 <ol style="list-style-type: decimal">
-<li>Hacer un alineamiento estructural multiple de los 3 pdbs
-1usg, 1usk, 4qwv</li>
-<li>Sesión de pymol</li>
+<li>Start with a sequence of a single organism<br />
+</li>
 </ol>
 <ul>
-<li>4qwv( quimera)</li>
+<li>Add a mutation</li>
 </ul>
-<ol start="3" style="list-style-type: decimal">
-<li>Subes la quimera a protein tools</li>
+<ol start="2" style="list-style-type: decimal">
+<li>Shuffling between species of the same gene</li>
 </ol>
+</div>
+<div id="native-structures-are-conformational-free-energy-minima" class="section level2">
+<h2><span class="header-section-number">9.2</span> Native structures are conformational free energy minima</h2>
 <ul>
-<li>redes de puentes de hidrógeno</li>
-<li>puentes de sal</li>
-<li>contact order
+<li>lower state</li>
+<li>There are many degrees of freedom</li>
+<li>There are a whole bunch of conformations</li>
+<li>2o^Nres Proteinsequenzen</li>
+<li>Only a small number of combinations will fold reliably and fast</li>
+</ul>
+</div>
+<div id="why-bother" class="section level2">
+<h2><span class="header-section-number">9.3</span> Why bother?</h2>
 <ul>
-<li>bajo se pliegan muy rápido</li>
-<li>están muy juntos los resiudos entonces se pliegan rapido</li>
+<li>Basic research
+<ul>
+<li>understanding sequence- structure-relations</li>
+</ul></li>
+<li>Enviroment
+<ul>
+<li>biosensors, enzymes to clean up toxic compounds</li>
+</ul></li>
+<li>Biotechnology and medicine
+<ul>
+<li>new enzymes and specificities</li>
+<li>stability</li>
+</ul></li>
+<li>Synthetic biology
+<ul>
+<li>new chemisy, specificities and interfaces</li>
 </ul></li>
 </ul>
-<ol start="4" style="list-style-type: decimal">
-<li>Subir la 4qwv a hydrogen bonds</li>
+</div>
+<div id="protein-engineering-and-design-approaches" class="section level2">
+<h2><span class="header-section-number">9.4</span> Protein engineering and design approaches</h2>
+<ul>
+<li>Scaffold selection
+<ul>
+<li>Natural protein
+<ul>
+<li>Tryptophan repressor with pocket chhanged</li>
+<li>Ligand binding site and change it to oxyn repressor</li>
+<li>two fluorescent proteins and a conformational change makes a fred signal an interaction between both and you can meassure that</li>
+</ul></li>
+</ul></li>
+<li>Cristal sturcture TrpR-wt bound to native ligand TRP</li>
+<li>TrpR-wt bound to the design target IAA but with a very low affinity</li>
+<li>S88Y introduced a large residue that pushes de Triptophan away and made it more specific for IAA but not por affine</li>
+<li>Affinity is improved with 8 other mutations</li>
+<li>Sequence optimisation
+<ul>
+<li>Computational protein design</li>
+<li>Directed evolution</li>
+</ul></li>
+<li>Functional protein</li>
+</ul>
+<div id="summary" class="section level3">
+<h3><span class="header-section-number">9.4.1</span> Summary</h3>
+<p>Natural proteins can be repurposed by design.<br />
+Specificity and affinity can be changed.
+Conformational changes can be used to trigger a readout.
+## De-novo design</p>
+<ul>
+<li>TIM- barrel are mostly enzymes</li>
+<li>You can define and parametarize</li>
+<li>out in out in aminoacids</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Where to start</li>
 </ol>
 <ul>
-<li>pones el pdb code</li>
-<li>hint: la proteína hace unas interacciones que no existene en la nativa y buscó cómo plegarse entonces puede ser que existan puentes de hidrógeno que no tendrían que existir
+<li>Connections between alpha helices and beta strands</li>
+<li>4 beta strands with an alpha helix as conector</li>
+<li>You feed to the Rosetta software
 <ul>
-<li>cambiar un aminoacido polar por uno hidrofobico para cambiar la configuración</li>
-<li>objetivo es tener una estructura similar</li>
-<li>hacer mutaciones con pymol o con coot para detectar mutaciones que promuevan el plegamiento para que se parezca más a 1usg o 1usk. Es más probable que quede en conformación abierta porque no hay ligando.</li>
+<li>find the conformational free energy minimum</li>
+</ul></li>
+<li>triptophan wedges for keeping apart the beta sheets</li>
+<li>33 superfamilies in SCOPE
+<ul>
+<li>psi-blast 3 iterations gives no hits to barrels</li>
+<li>only with hhpred you get hits</li>
+</ul></li>
+<li>Extending the barrel
+<ul>
+<li>what can it do, it folds but nothing more</li>
+<li>PSIPRED</li>
 </ul></li>
 </ul>
-<ol start="5" style="list-style-type: decimal">
-<li>haces la mutaciones en coot o pymol</li>
-<li>Generar el modelo mutante</li>
+<p>### Summary II</p>
+<p>-Idealized protein domains can be designed de novo
+- The designs cover new and unexplored sequence space
+- These “history-free” protein</p>
+</div>
+</div>
+<div id="fragment-based-design" class="section level2">
+<h2><span class="header-section-number">9.5</span> Fragment-based design</h2>
+<ul>
+<li>Natural proteins evolved through duplicationa and recombination</li>
+<li>recombination also can happen it is not clear how often but it happens</li>
+<li>We built new proteins from fragments of different folds
+<ul>
+<li>HisF binds a double phosphorylated</li>
+</ul></li>
+</ul>
+<div id="how-do-all-folds-compare" class="section level3">
+<h3><span class="header-section-number">9.5.1</span> How do all folds compare</h3>
+<p><a href="https://fuzzle.uni-bayreuth.de/">Fuzzle data base for taking fragments and recombine</a></p>
+<ul>
+<li>Design of protein chimeras with ProtLego</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Fetch fuzzle database</li>
+<li>Represent relationships</li>
+<li>Build chimeras</li>
+<li>Score chimeras</li>
 </ol>
-<pre><code>1. Hacer un alineamiento estructural multiple de estas tres pdbs
-
-1usg
-1usk
-4QWV
-
-2. Sesión de pymol 
-
-4QWV
-
-3. Utilizar las herramientas de 
-
-https://proteintools.uni-bayreuth.de/
-
-Para detectar mutaciones que promuevan el plegamiento de 4QWV para que se parezca mas 
-
-1usg
-
-1usk
-
-4. Hacer las mutaciones en coot o pymol 
-
-5. Generar su modelo mutante
-
-6. mapa de densidad electrónica 
-7. correr el plugin 
-
-# molprobity 
-mobprobity.biochem.duke.edu 
-</code></pre>
-<p>plugin clashes
-<a href="https://pymolwiki.org/index.php/Show_bumps" class="uri">https://pymolwiki.org/index.php/Show_bumps</a></p>
-<p><code>show_bumps</code></p>
-<p>back to query multiple
-1usg
-1usk
-4qwv</p>
-<p>solo la cadena A</p>
-<p>puentes entre la quimera entre el lobulo de abajo y la de arriba</p>
-<p><a href="https://proteintools.uni-bayreuth.de/">reglas de construcción de proteinas</a></p>
-<p><a href="https://www.ebi.ac.uk/msd-srv/ssm/">link pdbefold mitch</a></p>
 </div>
-<div id="genealogy" class="section level2">
-<h2><span class="header-section-number">6.9</span> Genealogy</h2>
-<p>Si dos proteínas</p>
-<p>homologia es convergencia
-analogía es divergencia</p>
-<p>beta barrels son homologos porque surgieron de uno ancestral
-- analogos aunque sean similares no provienen de un ancestro común</p>
-<p><a href="http://ekhidna2.biocenter.helsinki.fi/dali/">dali server for comparing protein structures in 3D</a></p>
-<p><a href="https://www.mpibpc.mpg.de/15747186/cv_soeding">crak matemático que desarrolla herramientas bioinformáticas</a></p>
-<p><a href="https://toolkit.tuebingen.mpg.de">max planck bioinformatic toolkit</a></p>
-<ul>
-<li>paralogy = duplication event</li>
-</ul>
-<p><a href="http://prodata.swmed.edu/malisam/">malisam analogous base de datos de proteinas estructuralmente anólogas</a></p>
-<ul>
-<li>proteinas misma estructura se dice que son convergentes</li>
-<li>secuencias muy parecidas generalmente son muy homologas</li>
-<li>muchas proteinas estan echas por dominios
-<ul>
-<li>autonomous folding units (domain)</li>
-</ul></li>
-</ul>
-<div id="comprehensive-databases" class="section level3">
-<h3><span class="header-section-number">6.9.1</span> comprehensive databases</h3>
-<p>NCBI databases
-Uniprot</p>
-</div>
-<div id="other-databases" class="section level3">
-<h3><span class="header-section-number">6.9.2</span> other databases</h3>
-<p><a href="https://www.cathdb.info">cath database</a>
-1. Utilizo todos los servers posibles para saber todo de mi proteina
-2. Ya luego hago experimentos
-3. puede ver los homologos para buscar estabilidad en</p>
-<p>tim barrel
-compartimentalizada
-fetch 1thf
-la estabilidad está dada por la parte de abajo
-casi todos los barriles tim unen fosfato en la misma posicion
-- permite clusterizar los barriles tim por proteinas</p>
-<p><a href="https://fuzzle.uni-bayreuth.de">fold puzzle database, secuencia y estructura en una misma base</a></p>
-<blockquote>
-<p>gene machine the race to deciper libro</p>
-</blockquote>
-</div>
-</div>
-<div id="chemical-methods-and-thermal-denaturation-estimation-of-thermodynamic-stability-disordered-proteins" class="section level2">
-<h2><span class="header-section-number">6.10</span> Chemical methods and thermal denaturation Estimation of thermodynamic stability Disordered proteins</h2>
-<p>Protein folding in the cell ( in vivo) Introduction</p>
-<p>Uniprot
-uniref
-tenemos cd hit que hace clusters de las porteínas
-sequence based clsassifci</p>
-<p>ecod evolutionary classification of protein domains
-<a href="http://prodata.swmed.edu/ecod/">ecod</a></p>
-<p><a href="https://github.com/soedinglab/hh-suite">Remote protein homology detection suite</a></p>
-<p><a href="pymol.html#uniprot">UniProt</a> <a href="http://www.uniprot.org/" class="uri">http://www.uniprot.org/</a>
-4) CDD: <a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi" class="uri">https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi</a> 5) SMART: <a href="http://smart.embl-heidelberg.de/" class="uri">http://smart.embl-heidelberg.de/</a>
-6) Pfam: <a href="http://pfam.xfam.org/" class="uri">http://pfam.xfam.org/</a></p>
-</div>
-<div id="the-ribosome" class="section level2">
-<h2><span class="header-section-number">6.11</span> The ribosome</h2>
-</div>
-<div id="evolution-of-the-ribosome" class="section level2">
-<h2><span class="header-section-number">6.12</span> Evolution of the ribosome</h2>
-<p>Protein folding in the ribosome, methods and findings.</p>
-</div>
-<div id="interactive-exercises-protein-folding-and-the-ribosome." class="section level2">
-<h2><span class="header-section-number">6.13</span> Interactive exercises protein folding and the ribosome.</h2>
+<div id="summary-iii" class="section level3">
+<h3><span class="header-section-number">9.5.2</span> summary III</h3>
+<p>Proteins evolved from subdomain sized fragments
+fragments- building complexity
+denovo- still difficult, structure</p>
+<p>foldit a game that makes you learn different parts</p>
+<p><a href="https://hoecker-lab.github.io/protlego/">Protlego: A Python package for the analysis and design of chimeric proteins</a></p>
+<p><a href="https://deepmind.com/blog/article/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology">deep mind</a></p>
 
+</div>
 </div>
 </div>
             </section>
@@ -472,8 +399,8 @@ sequence based clsassifci</p>
           </div>
         </div>
       </div>
-<a href="pymol.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="gunnar-von-heijne-semminar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="cotranslational-protein-folding-the-when-and-why-of-che.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

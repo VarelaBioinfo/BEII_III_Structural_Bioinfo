@@ -1,0 +1,101 @@
+# Protein design
+
+## Power of evolution 
+1. Start with a sequence of a single organism  
+  - Add a mutation 
+2. Shuffling between species of the same gene 
+
+## Native structures are conformational free energy minima 
+- lower state 
+- There are many degrees of freedom 
+- There are a whole bunch of conformations 
+- 2o^Nres Proteinsequenzen 
+- Only a small number of combinations will fold reliably and fast 
+
+## Why bother? 
+- Basic research 
+  - understanding sequence- structure-relations
+- Enviroment 
+  - biosensors, enzymes to clean up toxic compounds 
+- Biotechnology and medicine
+  - new enzymes and specificities
+  - stability 
+- Synthetic biology 
+  - new chemisy, specificities and interfaces 
+
+## Protein engineering and design approaches 
+- Scaffold selection 
+  - Natural protein 
+    - Tryptophan repressor with pocket chhanged 
+    - Ligand binding site and change it to oxyn repressor 
+    - two fluorescent proteins and a conformational change makes a fred signal an interaction between both and you can meassure that 
+- Cristal sturcture TrpR-wt bound to native ligand TRP 
+- TrpR-wt bound to the design target IAA but with a very low affinity 
+- S88Y introduced a large residue that pushes de Triptophan away and made it more specific for IAA but not por affine 
+- Affinity is improved with 8 other mutations 
+- Sequence optimisation 
+  - Computational protein design 
+  - Directed evolution 
+- Functional protein 
+
+### Summary 
+Natural proteins can be repurposed by design.  
+Specificity and affinity can be changed. 
+Conformational changes can be used to trigger a readout. 
+## De-novo design 
+
+- TIM- barrel are mostly enzymes 
+- You can define and parametarize 
+- out in out in aminoacids
+
+1. Where to start 
+- Connections between alpha helices and beta strands 
+- 4 beta strands with an alpha helix as conector 
+- You feed to the Rosetta software 
+  - find the conformational free energy minimum 
+
+- triptophan wedges for keeping apart the beta sheets 
+- 33 superfamilies in SCOPE 
+  - psi-blast 3 iterations gives no hits to barrels 
+  - only with hhpred you get hits 
+- Extending the barrel 
+  - what can it do, it folds but nothing more 
+  - PSIPRED 
+
+### Summary II 
+
+-Idealized protein domains can be designed de novo 
+- The designs cover new and unexplored sequence space 
+- These "history-free" protein 
+
+
+## Fragment-based design 
+
+- Natural proteins evolved through duplicationa and recombination
+- recombination also can happen it is not clear how often but it happens 
+- We built new proteins from fragments of different folds 
+  - HisF binds a double phosphorylated 
+
+### How do all folds compare 
+
+[Fuzzle data base for taking fragments and recombine](https://fuzzle.uni-bayreuth.de/)
+
+- Design of protein chimeras with ProtLego 
+1. Fetch fuzzle database 
+2. Represent relationships 
+3. Build chimeras 
+4. Score chimeras 
+
+### summary III 
+Proteins evolved from subdomain sized fragments 
+fragments- building complexity 
+denovo- still difficult, structure 
+
+
+foldit a game that makes you learn different parts 
+
+
+[Protlego: A Python package for the analysis and design of chimeric proteins](https://hoecker-lab.github.io/protlego/)
+
+[deep mind](https://deepmind.com/blog/article/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology)
+  

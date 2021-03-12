@@ -1,0 +1,187 @@
+# Cotranslational protein folding: the when and why of che
+
+## Proteins are astoundingly complicated 
+- Bovine respiratory complex I
+- how do this complexes come together
+  - 7 subunits encoded in mitochondria
+  - 38 subunits encoded in nucleus, traversing two membanes 
+  - 1 flavin mononucleotide 
+  - 8 iron sulfur 
+  
+## Defects in protein folding lead to human disease 
+- Amyloid depostis 
+  - prions
+  -alzheimer 
+  - systemic amyloids
+  - Huntingtin 
+- Mutations 
+  - cancer 
+  - metabolic disease 
+    - cystic fibrosis 
+- Denaturing stress 
+  - ischemia 
+  - stroke 
+  - aging 
+
+## Molecular chaperone socntrol every aspect f cellular protein homeostasis 
+- follding 
+- degradation 
+- proteostasis network is complex and function is link to disease 
+
+## CLIP chaperones linked to protein synthesis folding of newly made proteins 
+- heat chosk proteins 
+
+## Co-translation folding: the vectorial nature of translation determines the folding pathway
+- machinery 
+- protein evolved to fold co-translationally 
+- folding pathway of nascent chins is different that in vitro folding - different chaperones bind to different nascent chains 
+  - nac
+  - hsp70
+  - TRiC
+  - SRP
+
+## Biogenesis begins at the ribosome 
+- protein appears vectorialy 
+- incomplete motifs need to be read by enzymes, chaperones and targeting factors 
+- incomplete motifs are ambiguous 
+  - do chaperones compete with each other? 
+  - Exquisite in vivo specificity 
+
+
+ 
+### interaction of nascent chains with HSP70
+  - ATP dependent chaperone
+  - substrate binding domain 
+  - bind approx 20% of the nascent chains 
+
+TRiC/CCT binds 5-10% nascent chains 
+- in vitro can bind many proteins 
+- hsp70 binds early in translation - TRiC later in translation 
+
+
+folds a unique set of cellular proteins with complex topologies 
+- p53
+- dna repai 
+Gbeta subunit
+- tubulin 
+- actin 
+- telomerase
+- F-box proteins
+
+Some data shows there is a consideable degree of folding by just bindin without requiring. It can bind domain 
+- restricts conformational entropy - actin can bin but can not be folded to groyal but not to TRiC
+
+## How do Hsp70 and TRiC engage their cognate substrates co-translationally? 
+
+enrichment is puromycine sensitive
+- HSP70 binds  
+- sites that they recognize are different 
+
+- extensive vinding to the emergent nascent chain 
+  - Sab is
+  - there is not coat 
+
+can binding events be influenced by the length of the transcript being translated?  
+
+- Domain topology 
+- There are some specific domain topologies 
+triC
+
+Secondary structure propensit
+
+Hsp70 
+- hydrophobic consensus motif 
+- 
+
+TRic 
+- maybe they nide to form another structrue apart beta sheets
+- problem may need chaperones to maintain stability 
+
+
+- what emerge from the ribosome 
+
+- domain  HSP70
+- Ssb bind to the beginign of the domain 
+
+Enrichment ç
+- rossman fold 
+- tim barrels 
+- beta propeler 
+- alpha/beta plait 
+
+Dividing by domains
+- tim barrel earlier 
+-beta propeler binds late 
+
+- what came out of the ribosome when 
+
+- key associations in hydrophobic parts of the protein 
+  - association shoud be more common in membrane proteins 
+  
+if ke
+
+if TRiC binds to hydrophobic parts of the protein, 
+
+how does this cotranslational chaperone function 
+
+- cheperonepathies??
+
+beta propellers bind to 
+
+## what detemines binding: kinetics of elongation rate? 
+Codon optimality 
+- all sequence yeast, calculated the codon optimality scale 
+- conserved non optimal codons linked to folding at turns/loops - elongation rate 
+- glicines are translated more slowly  
+- wobble codons 
+- orchestrate 
+- this makes you think that there is not such a think as a silen mutation but that it impacts on kinetics 
+
+Analysis of ribosome profiling dataset 
+- abundanty translated mRNA
+- where initiation heppane 
+- Initiation 
+- Sequences of ribosome colissions 
+- really powerful but noisy 
+- recruitment correlate to an elongation slowdown 
+  - slowdown in kinetics promotes binding 
+  - poly proline 
+- Average speed is 4 aminoacids per second 
+- 
+
+## why we age 
+- 
+who is it messed up 
+- trna synthatases stall more in aged polysomes 
+- strong aggregation 
+organismos más longevos tienen buena fidelidad de traducción. 
+  
+- walther et al (Hartl) Cell 2005
+- della david kenyon(PLOS)
+
+## Practice
+
+1. podemos describir la topología correcta con los dos servidores 
+2. Mandar un text file con las predicciones 
+
+
+Descarga el archivo tarea, usa cada secuencia como query en Quick2D y Ali2D de la página MPI Toolkit
+
+
+100 sequences in CLu
+
+1. protein blast 
+
+las 3 proteinas 
+- EmrE: 
+- TM
+- mandar la proteína 
+
+Intentar hacer la predicción 
+de dicho analisis con delta G predictor 
+https://dgpred.cbr.su.se/index.php?p=TMpred
+
+
+
+elifesciences.org/
+

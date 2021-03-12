@@ -1,0 +1,189 @@
+# Gunnar von Heijne semminar 
+
+Signal peptides
+- targeting information 
+- Chloroplasts targeting sequences
+- mitocondrial targeting sequences
+- peroxisome targeting sequences 
+
+## The signal sequence
+
+- Extension in the n terminus that encodes targeting information 
+- Common architecture 
+  - tripod structure 
+    - n-region: positively charged
+    - h-region: hydrophobic
+      - valines 
+    - c-region: more polar, small residues in -1,-3 
+      - alanine, serine or glicine 
+      - protease acts 
+
+## Can someone identify such sequences with bioinforatics on data bases
+
+> A new method for predicting signal sequence 
+
+- using PSSM position specific scoring matrix 
+- Exerything was allign to the -1 
+  - where smaller amino acids tend to be 
+- just counts and a frequency 
+- nurmalizing the count by the expected count 
+  - taking the natural log 
+    - less than exped would be less than one so ol will be negative 
+  - for every sequence you can get a score 
+  - signal sequence vs no signal sequence 
+  - real separation between cytosolic sequences 
+  - how can you predict the cleavage site? 
+  
+## Machine learning approaches
+
+- SignalP with artificial neural networks 
+- Input layer
+  - where you read 
+  - depending on the aminoacid differen values
+- 1st hidden layer 
+  - input feeds it 
+- 2nd hidden layer 
+- output layer 
+  - high output is probably a signal sequence (yes) 
+  - not a signal sequence (no)
+  
+Imagine you are 
+- hydrophobic 1 
+- polar  0 
+- charge 0 
+1. is a hydrophobic 
+
+Wi= the first weight, each node is propagated with a weight which initialy is undecided 
+
+each conection between input layer and 1st hidden layer 
+
+x1 by w1 =a
+x2 by w2 = b
+x3 by w3 = c 
+
+Then you sum the values a`+b+c and you transform the result with a function such that if your sum is less than the threshold the output to the next one will be 
+- strong enough input makes a strong output to propagate to 2nd hidden layer 
+- How do you choose the values for the weight?
+  - random 
+  - there is a procedure where you can train the weights, optimization with true negative and true positive 
+  - true sequence peptides 
+
+- you want as few as possible hidden layers 
+  - easiest is to start with one 
+- feed forward networks 
+  - unidirectional 
+- 
+
+### You need 
+- high-quality dataset of positive and negative examples 
+- choose the architecture 
+  - can be optimized 
+- all internal parameter in the ANN artificial neural network 
+- you take 20 of both and you train with 80 both and test 20 to test and then you can take another 20 to test and train with other 80 to make the pondered mean 
+
+MMC detection will be 1 if your predictions are good 
+- CS precision 
+  - number of cleaveage site predictions that are correct 
+- CS recall 
+  - what the fraction where with the 
+  
+## Protein sorting in a eukaryotic cell 
+- TargetP tries to predict where the signal comes from 
+  - mitoP 
+  - SignalP 
+  - ChloroP
+  - TatP 
+  - LipoP 
+ [targetP](www.cbs.dtu.dk)
+
+So the main goal of choosing a function is to 
+ 
+## Memebrane proteins 
+
+- Have been designed by nature to optimately locate between lipid bilayers 
+- two main designs 
+  - helix bundle 
+    - alfa helices with mostly hydrophobic aminoacids 
+  - beta barrel
+    - antiparalel beta sheet 
+    - inside is polar
+    - outside is hidophobic
+- Helix bundle membrane protein 
+  - topology diagram 
+    - where in the sequence 
+    - overall orientation 
+    - 1 orientation in 99%
+    - you want to preditct 
+      - where are transmembran helices 
+
+TM helices are 
+- 1 aminoacid apports 1.5 armstrong to the length of a helix 
+- helices are inserted independently 
+- helices 20- 30 residues long 
+  - trp and tyr big aromatic residues that accumulate in the lipid head regions flanking the core 
+    - they signal the end of the beta strands 
+    - loops tend to be 10- 20 residues 
+      - quite short
+- if you compare compoistion between the loops facing
+  - inward the cell facing tendt to have 3 t o 4 more k and R positively charge aminoacids 
+    - almost a universal truth 
+
+## Topology prediction 
+
+You said that this is a mature field, the current major discoveries are being done in 3D structure or 3D to 3D interacition?
+
+- old field  
+- TMHMM 
+- HMMTOP
+
+1. hidrophobicity 
+2. positive bias 
+3. Machine learning 
+
+### TopPred
+- hidophobity analysis with positive inside rule 
+- hidrophobicity plot
+  - widow of 20 residues 
+    - average of hidrophobicity
+      - negative numbers to charge and polar residues 
+- hard to create the cut-off so this ended the methods 
+- it added positive inside rule 
+- one cut-off chosen so high that it must show hidrophobicity 
+- a second cut that shows certainly they are not
+- it counts positive charges 
+
+### TMHMM
+- you formulate a model 
+tail(out)-helix-inside loop-helix-outsideloop-helix 
+- in each node you have a program
+  - alignmente or a certain score? 
+- markov model 
+
+### TOPCONS
+- web site 
+- you submit your sequence 
+
+### How good are topology predictors 
+- single sequence predictor 70-75% 
+- mutli-sequence 80-85%
+- 97%
+- bacteria are easier than eukaryotes 
+
+### 3D structure of membrane proteinns from Genomic Sequencing 
+- alpha-fold two 
+- huge protein sequence database 
+  - sure you ll find a homoloug for your protein 
+- co-evolving residues 
+  - you have multiple sequence alignment and you look for coinciden patterns of mutation 
+  - if i can identify this type of co-evolving pairs there is a high probability that if one mutates the other one must mutate in order to keep the structure 
+  
+Can you see the same concept of cooevolution between interacting proteins? yes you can 
+
+coevolution and deep network 
+what s the difference between deep network and artificial neural networks 
+
+
+
+
+
+

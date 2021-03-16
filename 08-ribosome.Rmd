@@ -1,0 +1,45 @@
+# Ribosomas 
+
+[Loren Dean Willimas](https://youtu.be/AF0VmMvE1yI)
+
+[David Baker](https://youtu.be/Rt6EySuK6xk)
+
+## Root of the tree: The significane, evolution and origins 
+- lo más central del ribosoma es lo más conservado
+- evolucionan 
+- ortogonal ribosomes 
+  - modifican la antishine-dalgarno region y puedes pegar mensajero exogenos
+  - solo traducen el mensajero externo 
+- se puede mapear claramente con la evolución del ribosoma 
+- feedback loop 
+
+Institutos cutting edge pero que se tratan más como industria 
+[Alexey amunts, scilifelab](https://www.scilifelab.se)
+[Swedens largest center of medica academic research](https://ki.se/en)
+
+- logran reconsturir el árbol de la vida solamente con el tunnel, con la geometría del tunnel de salid. 
+
+- Constriction site 
+  - un constriction site  
+    - bacterias solo tienen uno 
+  - dos contriction sites  
+    - eucariontes 
+  - la mitocondria es 
+  
+mapear las 
+- uL22
+- uL23
+- uL4
+- uL24
+- en diferentes colores y en surface
+
+Replicar la imagen 
+[play at foldit](https://fold.it/)
+
+[structure](https://www.rcsb.org/structure/6i0y)
+
+
+[gunnar](gvheijne@mac.com) 
+[judyth](jfrydman@stanford.edu)
+[Birte](Birte.Hoecker@uni-bayreuth.de)
+
